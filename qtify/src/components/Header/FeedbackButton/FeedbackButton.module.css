@@ -1,0 +1,32 @@
+.feedback {
+  background-color: #121212;
+  color: #34c94b;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: max-content;
+}
+.feedback > div {
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.feedback:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 850px) {
+  .feedback {
+    background-color: #121212;
+    color: #34c94b;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: max-content;
+  }
+  .feedback > div {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

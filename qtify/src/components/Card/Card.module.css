@@ -1,0 +1,148 @@
+.albumCardContainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 6px;
+  position: relative;
+  width: 159px;
+}
+
+.albumCard {
+  height: 205px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.albumCard img {
+  height: 170px;
+  width: 100%;
+}
+
+.albumBody {
+  height: 35px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.albumPill {
+  background-color: #121212;
+  margin: 0 8px;
+  width: max-content;
+  border-radius: 12px;
+  font-weight: 400;
+  padding: 4px 8px;
+  color: white;
+  font-size: 10px;
+}
+
+.albumCardTitle {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 21px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* tablet */
+@media only screen and (max-width: 850px) {
+  .albumCardContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 6px;
+    position: relative;
+    width: 120px;
+  }
+  .albumCard {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .albumCard img {
+    height: 120px;
+    width: 100%;
+  }
+  .albumPill {
+    background-color: #121212;
+    margin: 0 8px;
+    width: max-content;
+    border-radius: 12px;
+    font-weight: 400;
+    padding: 4px 8px;
+    color: white;
+    font-size: 10px;
+  }
+
+  .albumCardTitle {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 21px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 420px) {
+  .albumCardContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 6px;
+    position: relative;
+    width: 100px;
+  }
+  .albumCard {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .albumCard img {
+    height: 100px;
+    width: 100%;
+  }
+
+  .albumPill {
+    background-color: #121212;
+    margin: 0 3px;
+    width: max-content;
+    border-radius: 12px;
+    font-weight: 400;
+    padding: 4px 4px;
+    color: white;
+    font-size: 8px;
+  }
+
+  .albumCardTitle {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 21px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+}

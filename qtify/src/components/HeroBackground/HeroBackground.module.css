@@ -1,0 +1,77 @@
+.heroBackgroundContainer {
+  color: #fff;
+  height: 270px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+.heroBackgroundText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.heroheadphone {
+  max-width: 212px;
+  max-height: 212px;
+}
+
+/* Tablet */
+@media only screen and (max-width: 850px) {
+  .heroheadphone {
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .heroBackgroundText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .heroBackgroundContainer {
+    margin-top: 10px;
+    color: #fff;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 420px) {
+  .heroheadphone {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .heroBackgroundText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .heroBackgroundContainer {
+    margin-top: 10px;
+    color: #fff;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+  }
+}
