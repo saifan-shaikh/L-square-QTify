@@ -12,17 +12,10 @@ const QtifyAccordian = () => {
   return (
     <div className={styles.faqContainer}>
       {/* FAQ */}
-      <h1 className={styles.faq}>FAQ</h1>
-      {/* Accordian */}
-      <div
-        style={{
-          border: "1px solid #fff",
-          borderRadius: "10px",
-          width: "1135px",
-          marginBottom: "24px",
-        }}
-      >
-        {/* Accordian 1 */}
+      <div className={styles.faq}>FAQ</div>
+
+      {/* Accordian 1 */}
+      <div className={styles.accordionContainer}>
         <Accordion
           style={{
             borderRadius: "10px",
@@ -52,14 +45,7 @@ const QtifyAccordian = () => {
         </Accordion>
       </div>
       {/* Accordion 2 */}
-      <div
-        style={{
-          border: "1px solid #fff",
-          borderRadius: "10px",
-          width: "1135px",
-          marginBottom: "24px",
-        }}
-      >
+      <div className={styles.accordionContainer}>
         <Accordion
           style={{
             borderRadius: "10px",

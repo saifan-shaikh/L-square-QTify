@@ -12,6 +12,7 @@
   border-style: solid;
   margin-bottom: 10px;
   border-color: #34c94b;
+  cursor: pointer;
 }
 
 .genreNotSelected {
@@ -28,6 +29,7 @@
   border-style: solid;
   border: none;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .songGenresContainer {
   /* color: #fff; */
