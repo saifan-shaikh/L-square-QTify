@@ -1,3 +1,4 @@
+import { StyledEngineProvider } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
 import {
   fetchNewAlbums,
@@ -14,25 +15,33 @@ import SongSection from "../Section/SongSection/SongSection";
 const HomePage = (props) => {
   return (
     <div>
-      {/* HEADER */}
-      <Header />
-      {/* Hero Background */}
-      <HeroBackground />
+      <StyledEngineProvider injectFirst>
+        {/* HEADER */}
+        <Header />
+        {/* Hero Background */}
+        <HeroBackground />
 
-      {/* Body */}
-      <div style={{ margin: "0 1rem" }}>
-        {/* Top Albums */}
-        <AlbumSection sectionTitle={"Top Albums"} dataSource={fetchTopAlbums} />
-        {/* New Albums */}
-        <AlbumSection sectionTitle={"New Albums"} dataSource={fetchNewAlbums} />
-        {/* New Songs */}
-        <SongSection
-          sectionTitle={"Songs"}
-          dataSource={[fetchSongGenres, fetchSongs]}
-        />
-        {/* Accordian */}
-        <QtifyAccordian />
-      </div>
+        {/* Body */}
+        <div style={{ margin: "0 1rem" }}>
+          {/* Top Albums */}
+          <AlbumSection
+            sectionTitle={"Top Albums"}
+            dataSource={fetchTopAlbums}
+          />
+          {/* New Albums */}
+          <AlbumSection
+            sectionTitle={"New Albums"}
+            dataSource={fetchNewAlbums}
+          />
+          {/* New Songs */}
+          <SongSection
+            sectionTitle={"Songs"}
+            dataSource={[fetchSongGenres, fetchSongs]}
+          />
+          {/* Accordian */}
+          <QtifyAccordian />
+        </div>
+      </StyledEngineProvider>
     </div>
   );
 };

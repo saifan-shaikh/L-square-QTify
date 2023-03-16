@@ -1,19 +1,16 @@
 import React from "react";
 import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import styles from "./Carousal.module.css";
 import CarousalLeft from "./CarousalLeft";
 import CarousalRight from "./CarousalRight";
 
 const Carousal = ({ data, renderReturn }) => {
+  // const swiper = useSwiper();
+
   return (
     <div>
-      <Swiper
-        spaceBetween={40}
-        slidesPerView={"auto"}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
-      >
+      <Swiper spaceBetween={40} slidesPerView={"auto"}>
         <CarousalLeft />
         {data ? (
           <div>
