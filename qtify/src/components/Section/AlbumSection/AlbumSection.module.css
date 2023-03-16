@@ -1,0 +1,22 @@
+.albumSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 0 0;
+}
+
+.albumSectionTitle {
+  color: #fff;
+}
+
+.albumCollapseButton {
+  color: #34c94b;
+  cursor: pointer;
+}
+
+.cardListShowAll {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 40px;
+}

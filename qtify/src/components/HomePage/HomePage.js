@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { fetchNewAlbums, fetchTopAlbums } from "../../api/BackendApiCalls";
-import Card from "../Card/Card";
+import {
+  fetchNewAlbums,
+  fetchSongGenres,
+  fetchSongs,
+  fetchTopAlbums,
+} from "../../api/BackendApiCalls";
+import QtifyAccordian from "../Accordian/QtifyAccordian";
 import Header from "../Header/Header";
 import HeroBackground from "../HeroBackground/HeroBackground";
-import Section from "../Section/Section";
+import AlbumSection from "../Section/AlbumSection/AlbumSection";
+import SongSection from "../Section/SongSection/SongSection";
 
 const HomePage = (props) => {
   return (
@@ -16,9 +22,16 @@ const HomePage = (props) => {
       {/* Body */}
       <div style={{ margin: "0 1rem" }}>
         {/* Top Albums */}
-        <Section sectionTitle={"Top Albums"} dataSource={fetchTopAlbums} />
+        <AlbumSection sectionTitle={"Top Albums"} dataSource={fetchTopAlbums} />
         {/* New Albums */}
-        <Section sectionTitle={"New Albums"} dataSource={fetchNewAlbums} />
+        <AlbumSection sectionTitle={"New Albums"} dataSource={fetchNewAlbums} />
+        {/* New Songs */}
+        <SongSection
+          sectionTitle={"Songs"}
+          dataSource={[fetchSongGenres, fetchSongs]}
+        />
+        {/* Accordian */}
+        <QtifyAccordian />
       </div>
     </div>
   );

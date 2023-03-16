@@ -1,11 +1,11 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
-import CarousalLeftButton from "./CarousalLeftButton.png";
+import CarousalRightButton from "./CarousalRightButton.png";
 
 const CarousalRight = () => {
   const swiper = useSwiper();
-  const prevSlide = () => {
-    swiper.slidePrev();
+  const nextSlide = () => {
+    swiper.slideNext();
   };
   return (
     <div
@@ -14,15 +14,15 @@ const CarousalRight = () => {
         position: "absolute",
         accentColor: "white",
         top: "40%",
-        left: "0",
+        right: "10px",
         zIndex: "5",
         transform: "translateY(-50%)",
       }}
-      onClick={prevSlide}
+      onClick={nextSlide}
     >
       <img
-        src={CarousalLeftButton}
-        alt="CarousalLeftButton"
+        src={CarousalRightButton}
+        alt="CarousalRightButton"
         style={{ backgroundColor: "white", borderRadius: "50%" }}
       />
     </div>

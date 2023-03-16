@@ -1,0 +1,36 @@
+.genreSelected {
+  background-color: #121212;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px 1rem 10px 1rem;
+  border: 0 0 10px 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-style: solid;
+  margin-bottom: 10px;
+  border-color: #34c94b;
+}
+
+.genreNotSelected {
+  background-color: #121212;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px 1rem 10px 1rem;
+  border: 0 0 10px 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-style: solid;
+  border: none;
+  margin-bottom: 10px;
+}
+.songGenresContainer {
+  /* color: #fff; */
+  display: flex;
+  gap: 10px;
+}

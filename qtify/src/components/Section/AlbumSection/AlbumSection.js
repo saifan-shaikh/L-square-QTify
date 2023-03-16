@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Card from "../Card/Card";
-import Carousal from "../Carousal/Carousal";
-import styles from "./Section.module.css";
+import Card from "../../Card/Card";
+import Carousal from "../../Carousal/Carousal";
+import styles from "./AlbumSection.module.css";
 
-const Section = ({ sectionTitle, dataSource }) => {
+const AlbumSection = ({ sectionTitle, dataSource }) => {
   const [isCollapse, setIsCollapse] = useState(true);
   const [cardsData, setCardsData] = useState([]);
 
@@ -16,12 +16,12 @@ const Section = ({ sectionTitle, dataSource }) => {
   return (
     <div>
       {/* Section Header */}
-      <div className={styles.sectionHeader}>
+      <div className={styles.albumSectionHeader}>
         {/* Title */}
-        <h4 className={styles.sectionTitle}>{sectionTitle}</h4>
-        {/* isCollapse */}
+        <h4 className={styles.albumSectionTitle}>{sectionTitle}</h4>
+        {/* Collapse/ShowAll */}
         <h4
-          className={styles.collapseButton}
+          className={styles.albumCollapseButton}
           onClick={() => {
             setIsCollapse((prevState) => !prevState);
           }}
@@ -35,12 +35,12 @@ const Section = ({ sectionTitle, dataSource }) => {
         // Cards Show All
         <div className={styles.cardListShowAll}>
           {cardsData.map((card) => (
-            <Card data={card} type="album" />
+            <Card key={card.id} data={card} type="album" />
           ))}
         </div>
       ) : (
         //Cards Collapsed - Carousal
-        <div style={{ color: "white" }}>
+        <div>
           <Carousal
             data={cardsData}
             renderReturn={(data) => <Card data={data} type="album" />}
@@ -51,4 +51,4 @@ const Section = ({ sectionTitle, dataSource }) => {
   );
 };
 
-export default Section;
+export default AlbumSection;
